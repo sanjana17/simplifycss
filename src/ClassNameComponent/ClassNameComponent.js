@@ -13,6 +13,8 @@ export default class ClassNameComponent extends Component {
             Value:
             <input type="text" value={this.props.classValue} onChange={this.props.changeClassValue}/>
           </label>
+          <br />
+          <br />
           <input type="button" value="add" onClick={this.props.changeAdd}/>
           <input type="submit" value="Submit" />
         </form>

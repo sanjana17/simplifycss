@@ -47,7 +47,6 @@ class App extends React.Component {
         }
         var classList = [];
         for (var name in classNames) classList.push(name);
-        alert(classList);
         this.setState({class:"", classValue: "", classArray: objects, classObj:{}})
     }
 
@@ -69,9 +68,8 @@ class App extends React.Component {
       return (
           <div className="App">
             <ClassNameComponent className={this.state.class} classValue = {this.state.classValue} changeClass={this.handleClassChange} changeClassValue={this.handleClassValueChange} changeAdd={this.handleAddfunction} submit={this.handleSubmit}/>
-            <ButtonComponent styleValue={this.state.classObj}/>
-              {JSON.stringify(this.state.classObj)}
-            <CSSComponent/>
+            <ButtonComponent styleValue={this.state.classObj} className="component"/>
+            <CSSComponent className="css" classValues={this.state.classObj}/>
           </div>
       );
   }
