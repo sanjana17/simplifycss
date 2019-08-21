@@ -66,10 +66,13 @@ class App extends React.Component {
 
   render() {
       return (
-          <div className="App">
+          <div className="App container" >
             <ClassNameComponent className={this.state.class} classValue = {this.state.classValue} changeClass={this.handleClassChange} changeClassValue={this.handleClassValueChange} changeAdd={this.handleAddfunction} submit={this.handleSubmit}/>
-            <ButtonComponent styleValue={this.state.classObj} className="component"/>
-            <CSSComponent className="css" classValues={this.state.classObj}/>
+            <div className="row">
+              <ButtonComponent styleValue={this.state.classObj} className="component"/>
+              <div className="vl col-sm-1"></div>
+              <CSSComponent className="css" classValues={this.state.classObj}/>
+            </div>
           </div>
       );
   }

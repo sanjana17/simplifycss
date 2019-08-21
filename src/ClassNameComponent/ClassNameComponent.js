@@ -3,21 +3,20 @@ import React, { Component } from 'react';
 export default class ClassNameComponent extends Component {
   render() {
     return (
-      <div className="classnamecomponent">
-        <form onSubmit={this.props.submit}>
-          <label>
-            ClassName:
-            <input type="text" value={this.props.className} onChange={this.props.changeClass}/>
-          </label>
-          <label>
-            Value:
-            <input type="text" value={this.props.classValue} onChange={this.props.changeClassValue}/>
-          </label>
-          <br />
-          <br />
-          <input type="button" value="add" onClick={this.props.changeAdd}/>
-          <input type="submit" value="Submit" />
-        </form>
+      <div className="classnamecomponent jumbotron">
+        <div className="row">
+          <div className="input-group col-sm-4 offset-sm-2">  
+            <input type="text" value={this.props.className} onChange={this.props.changeClass} className="form-control" placeholder="className"/>
+          </div>
+          <div className="input-group col-sm-4">  
+            <input type="text" value={this.props.classValue} onChange={this.props.changeClassValue} className="form-control" placeholder="value"/>
+          </div>
+        </div>    
+        <br />
+        <div className="row offset-sm-5">
+          <button type="button" className="btn btn-primary" onClick={this.props.changeAdd}>add</button>
+          <button type="button" className="btn btn-success" onClick={this.props.submit}>submit</button>
+        </div>
       </div>
     )
   }
