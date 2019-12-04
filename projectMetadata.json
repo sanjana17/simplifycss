@@ -1,0 +1,7 @@
+{
+  "name": "Simplfy Css",
+  "image": "https://css-tricks.com/wp-content/uploads/2018/05/css-art.jpg",
+  "type": ["css", "Javascript", "react"],
+  "description": "This website designed to simplfy css, we can plugin any react component and add css on the fly and take the css generated file into the application",
+  "projectLink": ""
+}
